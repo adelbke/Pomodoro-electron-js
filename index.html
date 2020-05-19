@@ -3,10 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-	<title>Pomodoro timer</title>
+	<link rel="stylesheet" href="bootstrap-4.5.0-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h2>Hello world!</h2>
-	
+	<div style="height: 15vh;background: black;" class="w-100 d-flex flex-row-reverse">
+		<button class=" btn btn-danger rounded-0 d-inline-flex text-white cursor-pointer py-1 px-2 mx-0">
+			<svg class=" bi bi-x" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" d="M11.854 4.146a.5.5 0 010 .708l-7 7a.5.5 0 01-.708-.708l7-7a.5.5 0 01.708 0z" clip-rule="evenodd"/>
+				<path fill-rule="evenodd" d="M4.146 4.146a.5.5 0 000 .708l7 7a.5.5 0 00.708-.708l-7-7a.5.5 0 00-.708 0z" clip-rule="evenodd"/>
+			</svg>
+		</button>
+		<span class="w-100 d-flex" style="-webkit-app-region: drag"></span>
+
+	</div>
+	<div style="height: 45vh;" class="container bg-dark justify-content-between d-flex text-white">
+		<h2 id="timer" class="h1">00:00:00</h2>
+		<h2 class="h5 text-fino">Pomodoro</h2>
+	</div>
+	<div style="height: 40vh;" class="container py-2 h bg-dark justify-content-start d-flex text-white ">
+		<button id="main-button" class="mr-3 btn btn-primary py-0">Start Timer</button>
+		<button id="reset-button" class="mr-3 btn btn-info">Reset</button>
+		<div class="d-flex mr-4 flex-column text-info">
+			<span id="cycle-inidcator"></span>
+			<span id="type-indicator"></span>
+		</div>
+		<div class="d-flex flex-column-reverse text-white">
+			<span id="remaining-time" class="text-center">Remaining <br>00:00:00</span>
+		</div>
+	</div>
+	<script src="testing.js"></script>
 </body>
 </html>
